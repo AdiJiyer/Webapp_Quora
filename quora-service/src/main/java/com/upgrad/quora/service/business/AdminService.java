@@ -75,7 +75,15 @@ public class AdminService {
 
         return userAuthEntity.getUser();
     }
-
+    /**
+     * This method helps delete user
+     *
+     * @param uuid the  object from which new user will be deleted
+     *
+     * @return None
+     *
+     * @throws AuthorizationFailedException if validation for user details conflicts
+     */
     @Transactional(propagation = Propagation.REQUIRED)
     public void deleteUser(final String uuid, final String authorizationToken) throws UserNotFoundException, AuthorizationFailedException {
         UserAuthEntity userAuthEntity = userDao.getUserAuthToken(authorizationToken);
