@@ -6,13 +6,13 @@ server:
 spring:
 
   application:
-    name: proman-api
+    name: Quora-api
 
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/quora
     username: postgres
-    password: Microsoft123*
+    password: postgres
 
 
   jpa:
